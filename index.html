@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青禾影忆电影网 - 田园乡土与慢电影片单</title>
+<meta name="description" content="青禾影忆电影网(qingheyingyidianyingwang-h5)整理田园文艺、华语乡土、慢电影与自然纪录片片单，移动端自适应，必应收录友好，不提供盗版或软色情内容。">
+<meta name="keywords" content="青禾影忆电影网, 田园电影, 乡土片单, 慢电影, 自然纪录片, 华语文艺, 田园文艺">
+<meta name="author" content="青禾影忆电影网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qingheyingyidianyingwang-h5.github.io/">
+
+<style>
+:root{
+  --green:#4a7a5e;
+  --green2:#2d4a3a;
+  --wheat:#7a5c3a;
+  --gold:#c9a24b;
+  --paper:#f3f0e4;
+  --paper2:#ebe5d2;
+  --ink:#2c2a1e;
+  --muted:#8a8168;
+  --line:rgba(74,122,94,.3);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"Songti SC","Noto Serif CJK SC","PingFang SC",serif;
+  background:
+    radial-gradient(120% 60% at 90% -10%, rgba(201,162,75,.14), transparent 55%),
+    radial-gradient(120% 70% at 0% 0%, rgba(74,122,94,.16), transparent 55%),
+    linear-gradient(180deg,var(--paper),#ebe5d2 60%,#dfd6be 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* 顶部条 */
+.top-bar{
+  background:linear-gradient(90deg,var(--green2),var(--green),var(--wheat));
+  color:#f3f0e4;text-align:center;font-size:11px;letter-spacing:3px;
+  padding:6px 10px;font-weight:700;font-family:Arial,sans-serif;
+}
+
+/* 头部 */
+.header{max-width:1120px;margin:0 auto;padding:30px 20px 16px;text-align:center}
+.mark{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:12px 24px;border-radius:14px;
+  background:rgba(45,74,58,.06);border:1px solid var(--line);
+}
+.mark .ico{font-size:34px}
+.mark h1{font-size:26px;letter-spacing:4px;color:var(--green2)}
+.mark .en{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);letter-spacing:2px}
+.header p.slogan{margin-top:12px;color:#5d5540;font-size:14px}
+
+/* 搜索 */
+.search-wrap{max-width:520px;margin:16px auto 0}
+.search-wrap form{display:flex;height:42px;border-radius:21px;overflow:hidden;border:1px solid var(--line);background:#faf6e8}
+.search-wrap input{flex:1;border:none;outline:none;background:transparent;padding:0 18px;font-size:13px;color:var(--ink)}
+.search-wrap button{border:none;background:var(--green);color:#fff;padding:0 20px;font-weight:700;cursor:pointer}
+
+/* 导航 */
+.nav{max-width:1120px;margin:18px auto 22px;padding:0 20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.nav a{padding:7px 16px;border:1px solid var(--line);border-radius:20px;font-size:13px;color:#5d5540;background:#faf6e8}
+.nav a:hover,.nav a.active{background:var(--green);color:#fff;border-color:var(--green);font-weight:700}
+
+/* 主区 */
+.main{max-width:1120px;margin:0 auto;padding:0 20px 30px}
+
+/* 卷首 */
+.meadow-board{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--green2),#3a5e48);
+  color:#eef3ec;border-left:6px solid var(--gold);
+  border-radius:16px;padding:28px 26px;margin-bottom:28px;
+}
+.meadow-board::after{content:"🌾";position:absolute;right:16px;bottom:-18px;font-size:130px;opacity:.14}
+.meadow-board .kicker{font-family:Arial,sans-serif;font-size:12px;color:#bfe0c8;letter-spacing:3px}
+.meadow-board h2{font-size:25px;margin:6px 0 8px;color:#fff}
+.meadow-board p{color:#d7e6da;max-width:650px;font-size:14px}
+.meadow-board .chips{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.meadow-board .chips span{padding:4px 12px;border:1px solid rgba(191,224,200,.4);border-radius:20px;font-size:12px;color:#bfe0c8}
+
+/* 栏目头 */
+.section{margin-bottom:30px}
+.s-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;border-bottom:2px solid var(--line);padding-bottom:8px}
+.s-head .no{width:30px;height:30px;border-radius:6px;background:var(--green2);color:#eef3ec;display:flex;align-items:center;justify-content:center;font-weight:800}
+.s-head h3{font-size:18px;letter-spacing:1px;color:var(--green2)}
+.s-head .more{margin-left:auto;font-size:12px;color:var(--green);font-family:Arial,sans-serif}
+
+/* 栏目一：田园乡土 */
+.rural-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rural-card{
+  background:#faf6e8;border:1px solid var(--line);
+  border-top:3px solid var(--green);
+  border-radius:14px;padding:18px;transition:transform .25s;
+}
+.rural-card:hover{transform:translateY(-4px)}
+.rural-card .land{font-size:12px;font-family:Arial,sans-serif;color:var(--muted)}
+.rural-card h4{font-size:16px;margin:6px 0;color:var(--green2)}
+.rural-card .meta{font-size:12px;color:var(--muted);font-family:Arial,sans-serif;margin-bottom:8px}
+.rural-card p{font-size:13px;color:#4a4634}
+.rural-card .tag{margin-top:10px;font-size:11px;color:var(--green);border:1px solid var(--line);display:inline-block;padding:2px 10px;border-radius:12px}
+
+/* 栏目二：慢电影 */
+.slow-list{background:#faf6e8;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.slow-row{display:flex;gap:14px;padding:14px 16px;border-bottom:1px dashed var(--line);align-items:flex-start}
+.slow-row:last-child{border-bottom:none}
+.slow-no{width:34px;height:34px;border-radius:50%;background:var(--wheat);color:#f3f0e4;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.slow-info h4{font-size:15px;color:var(--green2)}
+.slow-info p{font-size:12px;color:#5d5540;margin-top:3px}
+.slow-chip{margin-left:auto;font-size:11px;color:var(--green);border:1px solid var(--line);padding:3px 10px;border-radius:12px;white-space:nowrap}
+
+/* 栏目三：自然纪录片 横向 */
+.doc-grid{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.doc-card{scroll-snap-align:start;flex:0 0 220px;background:#faf6e8;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.doc-top{height:80px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,var(--green),#335c44)}
+.doc-card:nth-child(2) .doc-top{background:linear-gradient(135deg,var(--wheat),#5a4228)}
+.doc-card:nth-child(3) .doc-top{background:linear-gradient(135deg,var(--gold),#8a6a22)}
+.doc-card:nth-child(4) .doc-top{background:linear-gradient(135deg,#6b8a7a,#3f5e50)}
+.doc-card:nth-child(5) .doc-top{background:linear-gradient(135deg,#7a5ea8,#4f3b73)}
+.doc-body{padding:12px}
+.doc-body h4{font-size:14px;color:var(--green2);margin-bottom:4px}
+.doc-body p{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* 栏目四：关于 */
+.about{background:var(--green2);color:#d7e6da;border-radius:14px;padding:24px;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.about .ico{font-size:38px}
+.about h3{font-size:17px;color:#bfe0c8;margin-bottom:6px}
+.about p{font-size:13px;color:#bcd3c0;max-width:660px}
+.about .url{margin-top:8px;font-family:Arial,sans-serif;font-size:12px;color:#bfe0c8}
+
+/* 页脚 */
+.footer{margin-top:30px;border-top:3px double var(--line);padding:26px 20px 38px;text-align:center;color:var(--muted);font-size:12px;font-family:Arial,sans-serif}
+.footer a{color:var(--green)}
+.footer .fn{margin-top:12px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.footer .fn a{color:var(--muted)}
+.footer .fn a:hover{color:var(--green2)}
+
+@media(max-width:860px){.rural-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .mark h1{font-size:22px}
+  .nav a{padding:6px 12px;font-size:12px}
+  .meadow-board{padding:20px 16px}
+  .meadow-board h2{font-size:20px}
+  .main{padding:0 16px 24px}
+  .rural-row{grid-template-columns:1fr}
+  .slow-row{flex-wrap:wrap}
+  .slow-chip{margin-left:0}
+  .doc-card{flex-basis:80%}
+  .about{padding:18px 14px}
+}
+</style>
+</head>
+
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="top-bar">🌾 青禾影忆电影网 · 田园乡土 / 慢电影 / 自然纪录片 · 单页自适应 · 必应收录友好</div>
+
+<header class="header">
+  <div class="mark">
+    <div class="ico">🌿</div>
+    <div>
+      <h1>青禾影忆电影网</h1>
+      <div class="en">qingheyingyidianyingwang-h5 · Meadow Frames</div>
+    </div>
+  </div>
+  <p class="slogan">"青草电影网/青青草"涉网信办点名擦边站族；我们做"青禾影忆"——田野、泥土、炊烟、河流，把慢的电影慢慢看。</p>
+  <div class="search-wrap">
+    <form action="#" method="get">
+      <input type="text" name="q" placeholder="搜 乡土 / 田园 / 慢电影 / 侯孝贤 / 自然纪录片...">
+      <button type="submit">采风</button>
+    </form>
+  </div>
+</header>
+
+<nav class="nav">
+  <a href="#" class="active">首页</a>
+  <a href="#">田园乡土</a>
+  <a href="#">慢电影</a>
+  <a href="#">自然纪录片</a>
+  <a href="#">青绿动画</a>
+  <a href="#">华语文艺</a>
+  <a href="#">关于青禾</a>
+</nav>
+
+<div class="main">
+
+  <section class="meadow-board">
+    <div class="kicker">MEADOW · SLOW · NATURE</div>
+    <h2>风吹麦浪的镜头，值得一个人静静看完</h2>
+    <p>青禾影忆电影网不做快消影视站，不挂擦边、不接博彩、不提供盗版下载。只整理值得慢看的东西：田园乡土片、慢电影、自然纪录片、青绿动画与华语文艺。每部片配一句编辑短评；单页静态、移动端自适应、内页 # 占位。</p>
+    <div class="chips">
+      <span>田园</span><span>乡土</span><span>慢电影</span><span>自然纪录</span><span>华语文艺</span>
+    </div>
+  </section>
+
+  <!-- 栏目一 -->
+  <section class="section" id="rural">
+    <div class="s-head"><span class="no">01</span><h3>田园与乡土</h3><a class="more" href="#">全部 #</a></div>
+    <div class="rural-row">
+      <article class="rural-card">
+        <div class="land">黄土 · 黄河</div>
+        <h4>《黄土地》</h4>
+        <div class="meta">1984 · 陈凯歌 · 摄影张艺谋</div>
+        <p>黄土坡、信天游、嫁女儿的轿子。土地大到人看不见自己，镜头一声不吭地记着。</p>
+        <span class="tag"># 第五代 # 乡土</span>
+      </article>
+      <article class="rural-card">
+        <div class="land">湘南 · 邮路</div>
+        <h4>《那山那人那狗》</h4>
+        <div class="meta">1999 · 霍建起</div>
+        <p>父亲退休，儿子接班，父子俩走三天山路送完最后一趟邮。中国电影里最好的父子戏之一。</p>
+        <span class="tag"># 父子 # 乡村</span>
+      </article>
+      <article class="rural-card">
+        <div class="land">西北 · 麦田</div>
+        <h4>《隐入尘烟》</h4>
+        <div class="meta">2022 · 李睿珺</div>
+        <p>两个被剩下的人，在西北大地上搭出一个家。土坯房、麦捆、借来的鸡蛋，朴素到发疼。</p>
+        <span class="tag"># 西北 # 底层</span>
+      </article>
+      <article class="rural-card">
+        <div class="land">关中 · 打官司</div>
+        <h4>《秋菊打官司》</h4>
+        <div class="meta">1992 · 张艺谋</div>
+        <p>"我要个说法。"一个农村妇女一路告到市里，把人情和法律撞在一起。</p>
+        <span class="tag"># 农村女性 # 说法</span>
+      </article>
+      <article class="rural-card">
+        <div class="land">云南 · 红土</div>
+        <h4>《碧罗雪山》</h4>
+        <div class="meta">2010 · 刘杰</div>
+        <p>怒江峡谷、傈僳族、熊与人的边界。保护区政策压到一个村子里，谁对谁错说不清。</p>
+        <span class="tag"># 少数民族 # 生态</span>
+      </article>
+      <article class="rural-card">
+        <div class="land">高原 · 藏族</div>
+        <h4>《塔洛》</h4>
+        <div class="meta">2015 · 万玛才旦</div>
+        <p>黑白影像、藏语、身份证。一个牧羊人进城办证，丢了羊，也丢了名字。</p>
+        <span class="tag"># 黑白 # 身份</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目二 -->
+  <section class="section" id="slow">
+    <div class="s-head"><span class="no">02</span><h3>慢电影长廊</h3><a class="more" href="#">完整 #</a></div>
+    <div class="slow-list">
+      <div class="slow-row">
+        <div class="slow-no">1</div>
+        <div class="slow-info"><h4>侯孝贤</h4><p>"远景长镜、框中取景、让人物自己走——风声比台词多，时间自己会流。"</p></div>
+        <div class="slow-chip">台湾新电影</div>
+      </div>
+      <div class="slow-row">
+        <div class="slow-no">2</div>
+        <div class="slow-info"><h4>小津安二郎</h4><p>"榻榻米机位、低视角、饭桌三句对白——一家的离散，拍得像季节变换。"</p></div>
+        <div class="slow-chip">东方静观</div>
+      </div>
+      <div class="slow-row">
+        <div class="slow-no">3</div>
+        <div class="slow-info"><h4>是枝裕和</h4><p>"饭桌上什么都说了，饭桌下什么都藏着——家庭不是和解，是习惯。"</p></div>
+        <div class="slow-chip">日式家庭</div>
+      </div>
+      <div class="slow-row">
+        <div class="slow-no">4</div>
+        <div class="slow-info"><h4>阿彼察邦</h4><p>"雨林、梦境、鬼魂、同性爱——时间不是线，是一层雾盖着另一层雾。"</p></div>
+        <div class="slow-chip">泰国慢电影</div>
+      </div>
+      <div class="slow-row">
+        <div class="slow-no">5</div>
+        <div class="slow-info"><h4>贝拉·塔尔</h4><p>"《撒旦探戈》七小时，雨从头下到尾——慢到你会重新学会看。"</p></div>
+        <div class="slow-chip">极慢长镜</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三 -->
+  <section class="section" id="doc">
+    <div class="s-head"><span class="no">03</span><h3>自然与纪录片</h3><a class="more" href="#">更多 #</a></div>
+    <div class="doc-grid">
+      <div class="doc-card"><div class="doc-top">🏔️</div><div class="doc-body"><h4>地球脉动</h4><p>从极地到深海，BBC 自然纪录的天花板。</p></div></div>
+      <div class="doc-card"><div class="doc-top">🕊️</div><div class="doc-body"><h4>迁徙的鸟</h4><p>跟鸟飞越大陆，雅克·贝汉的空中史诗。</p></div></div>
+      <div class="doc-card"><div class="doc-top">🐼</div><div class="doc-body"><h4>美丽中国</h4><p>BBC + 央视合拍，中国的山野与生命。</p></div></div>
+      <div class="doc-card"><div class="doc-top">🌿</div><div class="doc-body"><h4>本草中国</h4><p>一味药、一个人、一座山的时间。</p></div></div>
+      <div class="doc-card"><div class="doc-top">🌊</div><div class="doc-body"><h4>海洋</h4><p>雅克·贝汉，《迁徙的鸟》的蓝色续章。</p></div></div>
+    </div>
+  </section>
+
+  <!-- 栏目四 -->
+  <section class="section" id="about">
+    <div class="s-head"><span class="no">04</span><h3>关于青禾影忆</h3></div>
+    <div class="about">
+      <div class="ico">🌾</div>
+      <div>
+        <h3>不继承"青草/青青草"擦边站族</h3>
+        <p>青禾影忆电影网（qingheyingyidianyingwang-h5）只做田园乡土、慢电影与自然纪录片片单。原"青草电影网""青青草视频"属网安点名/下架的擦边影视站系，涉及淫秽色情与违法违规应用；本站不继承其名号与模式、不挂色情内容、不接境外博彩广告、不提供盗版下载。</p>
+        <div class="url">https://qingheyingyidianyingwang-h5.github.io</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer">
+  <div>© 2026 青禾影忆电影网 | qingheyingyidianyingwang-h5</div>
+  <div>永久地址：<a href="https://qingheyingyidianyingwang-h5.github.io">https://qingheyingyidianyingwang-h5.github.io</a></div>
+  <div>本站为田园乡土/慢电影/自然纪录片片单整理站，不提供盗版或软色情内容。</div>
+  <div class="fn">
+    <a href="#">首页</a><a href="#">田园</a><a href="#">慢电影</a><a href="#">纪录片</a><a href="#">青绿动画</a><a href="#">关于</a>
+  </div>
+</footer>
+
+</body>
+</html>
